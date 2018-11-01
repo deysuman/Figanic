@@ -1,1 +1,1 @@
-web: gunicorn fig.wsgi
+web: gunicorn Fig.wsgi
