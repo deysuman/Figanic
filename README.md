@@ -1,0 +1,3 @@
+# finagic
+
+Made with Python
