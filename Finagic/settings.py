@@ -27,6 +27,10 @@ SECRET_KEY = "u5wk#r_ku-pldps0quqd-^6d028+#ta6htf@um)rmjosq%rf80"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+S3_BUCKET = "https://s3.amazonaws.com/finagicstorage/"
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -59,7 +63,7 @@ ROOT_URLCONF = 'Finagic.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR+r'\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,6 +76,12 @@ TEMPLATES = [
         },
     },
 ]
+
+print ("Template folder")
+print (BASE_DIR+r'\templates')
+TEMPLATE_DIRS = (
+                    os.path.join(os.path.dirname(__file__),'templates'),
+)
 
 WSGI_APPLICATION = 'Finagic.wsgi.application'
 

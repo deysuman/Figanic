@@ -6,4 +6,6 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello world ! ")
+    data = {'url' : "https://s3.amazonaws.com/finagicstorage/assets"}
+    return render(request, "apple.html",
+                         data)
