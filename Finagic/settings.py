@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'Finagic.urls'
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'Finagic.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR+r'\templates'],
+        'DIRS': [BASE_DIR+r'\app\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +81,7 @@ TEMPLATES = [
 print ("Template folder")
 print (BASE_DIR+r'\templates')
 TEMPLATE_DIRS = (
-                    os.path.join(os.path.dirname(__file__),'templates'),
+                    os.path.join(os.path.dirname(__file__),'/app/templates'),
 )
 
 WSGI_APPLICATION = 'Finagic.wsgi.application'

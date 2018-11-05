@@ -1,0 +1,722 @@
+{% load static %}
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="">
+      <title>Finagic</title>
+      <!-- Bootstrap core CSS -->
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+       <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- Custom styles for this template -->
+	  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+      <!-- Custom fonts for this template -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">  
+   </head>
+
+<body>
+
+    <!-- Top bar -->
+    <div class="container-fluid p-0">
+        <div class="d-flex shadow mb-1 bg-info text-white justify-content-center align-items-center py-2">
+            <h6>Fatten Your Portfolio with our Stock Grading, Screening and Valuation tool for busy value investors</h6>
+            <button type="button" class="btn btn-outline-light radious px-3 py-1 ml-2">Join For Free</button>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="{% static '/images/logo.png' %}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+              
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <form class="form-inline my-2 my-lg-0 d-flex">
+                    <input class="form-control mr-sm-2 radious" type="search" placeholder="Find a Company">
+                    <button class="btn btn-outline-danger my-2 my-sm-0 radious" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Special Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary radious px-3 py-1 ml-2">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary radious px-3 py-1 ml-2">Join</button>
+                    </li>
+                    
+                </ul>    
+            </div>
+        </nav>
+    </div>
+
+    <!-- Middle -->
+    <div class="container-fluid my-4">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <!-- left panel -->
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-binoculars mr-3"></i>My Watchlist</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-filter mr-3"></i>Screener</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-lightbulb mr-3"></i>Ideas</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-window-restore mr-3"></i>Templates</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-info-circle mr-3"></i>Data Explorer</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-cloud-upload-alt mr-3"></i>Saved Work</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-directions mr-3"></i>How to Guide</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-building mr-3"></i>Classroom</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-check-square mr-3 mb-3"></i>Most Watched<i class="fas fa-angle-down mb-3 float-right"></i>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Apple</li>
+                            <li class="list-group-item">Facebook</li>
+                            <li class="list-group-item">Amazon.com</li>
+                            <li class="list-group-item">Microsoft</li>
+                            <li class="list-group-item">Johnson & Johnson</li>
+                            <li class="list-group-item">Walt Disney</li>
+                            <li class="list-group-item">Cisco Systems</li>
+                            <li class="list-group-item">NIKE</li>
+                            <li class="list-group-item">Coca-Cola</li>
+                            <li class="list-group-item">Wells Fargo</li>
+                            <li class="list-group-item">Netflix</li>
+                            <li class="list-group-item">Alphabet</li>
+                            <li class="list-group-item">Gilead Sciences</li>
+                            <li class="list-group-item">McDonald's</li>
+                        </ul>
+                    </a>
+                </div>
+               
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+                <!-- Right panel -->
+                <div class="px-3 py-2 mb-2 bg-dark text-white d-flex align-items-center expand justify-content-between"><h3 class="m-0 mr-2">Apple Inc.<span style="font-size: 14px">NasdaqGS: AAPL</span></h3>
+                    <div class="sample two">
+                        <input type="text" name="search" placeholder="Add to Watchlist">
+                        <button type="submit" class="btn btn-search fa fa-angle-down"></button>
+                        <button type="reset" class="btn btn-reset fa fa-times"></button>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="col-md-8 col-12 mt-4">
+                        <div class="row m-0">
+                            <div class="col-md-9 p-0">
+                                <h5 class="float-left mr-2"><b> Amazon.com Inc (AMZN) </b></h5><p class=""><i class="far fa-file"></i> 1789.30 | 1.43%</p>
+                                <img src="{% static '/images/graph1.png' %}" class="img-fluid">
+                            </div>
+                            <div class="col-md-3 graph-dot">
+                                <img src="{% static '/images/tag.png' %}">
+                                <ul class="pl-3 mt-3">
+                                    <li>Stock Price</li>
+                                    <li>Fair Value</li>
+                                    <li>Buy Price</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 pl-0 mt-3">
+                                <p class="m-0">Market Cap: <b>872.71B</b></p>
+                                <p class="m-0">EV/EBIT TTM: <b>120.83</b></p>
+                                <p class="m-0">Next QTR End: <b>2018-12-01</b></p>
+                            </div>
+                            <div class="col-md-4 mt-3 pl-0">
+                                <p class="m-0">Enterprise Value: <b>872.71B</b></p>
+                                <p class="m-0">Dividend Yield: <b>120.83</b></p>
+                                <p class="m-0">52 Week Hi: <b>2018-12-01</b></p>
+                            </div>
+                            <div class="col-md-4 mt-3 pl-0">
+                                <p class="m-0">Shares: <b>872.71B</b></p>
+                                <p class="m-0">Piotroski TTM: <b>120.83</b></p>
+                                <p class="m-0">52 Week Lo: <b>2018-12-01</b></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-12 mt-4">
+                        <h5><b>OSV RATINGS SUMMARY</b></h5>
+                        <div class="">
+                            <h6>Action Score</h6>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div class="progress w-75">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><p class="mb-0">Fair</p></div>
+                              </div>
+                              <span>72.6/100</span>
+                            </div>
+                            <h6>Quality Score</h6>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div class="progress w-75">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><p class="mb-0">Good</p></div>
+                              </div>
+                              <span>77.2/100</span>
+                            </div>
+                            <h6>Value Score</h6>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div class="progress w-75">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><p class="mb-0">Warning</p></div>
+                              </div>
+                              <span>52.6/100</span>
+                            </div>
+                            <h6>Growth Score</h6>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div class="progress w-75">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><p class="mb-0">Great</p></div>
+                              </div>
+                             <span>88.0/100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="company-benchmark">
+                            <div class="tool-header quote">
+                                <div class="title">Peer Benchmarks</div>
+                                <div class="line"></div>
+                                <div class="header-cell">
+                                    <div class="header-cell--icon" style="background: rgb(24, 93, 226); display: inline-block; height: 0.75rem; width: 0.75rem; border-radius: 50%; "></div>
+                                    <span class="header-cell--text">AAPL</span></div>
+                                <div class="header-cell">
+                                    <div class="header-cell--icon" style="background: rgb(245, 166, 35); display: inline-block; height: 0.75rem; width: 0.75rem; border-radius: 50%; "></div>
+                                    <span class="header-cell--text">Peers</span></div>
+                                <div class="header-cell">
+                                    <div class="header-cell--icon" style="background: rgb(189, 16, 224); display: inline-block; height: 0.75rem; width: 0.75rem; border-radius: 50%;"></div>
+                                    <span class="header-cell--text">Sector</span></div>
+                            </div>
+                        </div>
+                        <div class="v-tab d-flex my-4">
+                            <div class="nav flex-column col-3" id="v-pills-tab" role="tablist">
+                                <a class="tab--cell active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" >quote</a>
+                                <a class="tab--cell" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" >value</a>
+                                <a class="tab--cell" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" >size</a>
+                                <a class="tab--cell" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab">growth</a>
+                                <a class="tab--cell" id="v-pills-profit-tab" data-toggle="pill" href="#v-profit-settings" role="tab">profit</a>
+                              </div>
+                              <div class="tab-content pl-0 col-9" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->                                    
+                                </div>                                 
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div><div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-profit-settings" role="tabpanel" aria-labelledby="v-pills-profit-tab">
+                                    <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div><div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">Market Cap.</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="sector" class="marker low" style="background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="peers" class="marker mid" style="left: 0.417791%; background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>                                                        
+                                                </div>                                                    
+                                            </div>                                                
+                                        </div>
+                                        <div class="company">1,047 B</div>
+                                        <div class="peers">5.5 B</div>
+                                        <div class="sector">1.1 B</div>  
+                                    </div>
+                                    <!--end of row-->
+                                     <div class="metric-row">
+                                        <div class="range-wrapper">
+                                            <div class="name">% of 52 Week Low</div>
+                                            <div class="range-plot">
+                                                <div class="line">
+                                                    <div data-slug="peers" class="marker low" style="background: rgb(245, 166, 35);"></div>
+                                                    <div data-slug="sector" class="marker mid" style="left: 2.04278%; background: rgb(189, 16, 224);"></div>
+                                                    <div data-slug="company" class="marker high" style="background: rgb(24, 93, 226);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company">143.2%</div>
+                                        <div class="peers">118.6%</div>
+                                        <div class="sector">119.1%</div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="news-ticker">
+                            <ul class="news-slide list-unstyled">
+                                <li>
+                                    <a href="" class="article">
+                                        <div class="highlighted"><span class="title">China&amp;apos;s Xiaomi Aims Its Priciest Phone at Huawei and Apple</span></div>
+                                        <div class="details"><span class="time">an hour ago</span><span><span class="publisher">finance.yahoo.com</span><span class="ticker">AAPL</span></span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="article">
+                                        <div class="highlighted"><span class="title">China&amp;apos;s Xiaomi Aims Its Priciest Phone at Huawei and Apple</span></div>
+                                        <div class="details"><span class="time">an hour ago</span><span><span class="publisher">finance.yahoo.com</span><span class="ticker">AAPL</span></span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="article">
+                                        <div class="highlighted"><span class="title">China&amp;apos;s Xiaomi Aims Its Priciest Phone at Huawei and Apple</span></div>
+                                        <div class="details"><span class="time">an hour ago</span><span><span class="publisher">finance.yahoo.com</span><span class="ticker">AAPL</span></span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="article">
+                                        <div class="highlighted"><span class="title">China&amp;apos;s Xiaomi Aims Its Priciest Phone at Huawei and Apple</span></div>
+                                        <div class="details"><span class="time">an hour ago</span><span><span class="publisher">finance.yahoo.com</span><span class="ticker">AAPL</span></span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="article">
+                                        <div class="highlighted"><span class="title">China&amp;apos;s Xiaomi Aims Its Priciest Phone at Huawei and Apple</span></div>
+                                        <div class="details"><span class="time">an hour ago</span><span><span class="publisher">finance.yahoo.com</span><span class="ticker">AAPL</span></span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="article">
+                                        <div class="highlighted"><span class="title">China&amp;apos;s Xiaomi Aims Its Priciest Phone at Huawei and Apple</span></div>
+                                        <div class="details"><span class="time">an hour ago</span><span><span class="publisher">finance.yahoo.com</span><span class="ticker">AAPL</span></span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class=" overview">
+                            <div class="tool-header mb-4">
+                                <div class="title">Company Profile</div>
+                                <div class="line"></div>                                    
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <!-- Model -->
+                    <div class="col-md-6 model">
+                        <div class="right-part">
+                            <div class="tool-header financials">
+                                    <div class="title">Pre-built Financial Models</div>
+                                    <div class="line"></div>
+                                    <span class="action-link view">VIEW MODEL</span>
+                                    <span class="action-link ">Gallery</span>
+                                </div>                            
+                            <form class="form-inline mb-4 mid-form">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-danger my-2 my-sm-0 radious" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                            <div class="my-3">
+                                <i class="fas fa-star"></i>
+                                <a href="#">DCF: 10 Year EBITDA Exit<span>view</span></a>
+                                <a href="#" class="float-right">updated 9 hours ago</a>
+                            </div>
+                            <div class="my-3">
+                                <i class="fas fa-star"></i>
+                                <a href="#">DCF: 10 Year EBITDA Exit<span>view</span></a>
+                                <a href="#" class="float-right">updated 9 hours ago</a>
+                            </div>
+                            <div class="my-3">
+                                <i class="fas fa-star"></i>
+                                <a href="#">DCF: 10 Year EBITDA Exit<span>view</span></a>
+                                <a href="#" class="float-right">updated 9 hours ago</a>
+                            </div>
+                            <div class="my-3">
+                                <i class="fas fa-star"></i>
+                                <a href="#">DCF: 10 Year EBITDA Exit<span>view</span></a>
+                                <a href="#" class="float-right">updated 9 hours ago</a>
+                            </div>
+                            <div class="my-3">
+                                <i class="fas fa-star"></i>
+                                <a href="#">DCF: 10 Year EBITDA Exit<span>view</span></a>
+                                <a href="#" class="float-right">updated 9 hours ago</a>
+                            </div>
+                            <div class="my-3">
+                                <i class="fas fa-star"></i>
+                                <a href="#">DCF: 10 Year EBITDA Exit<span>view</span></a>
+                                <a href="#" class="float-right">updated 9 hours ago</a>
+                            </div>
+                            <div class="finance my-4">
+                                <div class="tool-header financials">
+                                    <div class="title">Historical Financials</div>
+                                    <div class="line"></div>
+                                    <span class="action-link view">VIEW FULL MODEL</span>
+                                    <span class="action-link export">EXPORT</span>
+                                </div>
+                                <table class="table finance-table mt-4">
+                                    <thead>
+                                      <tr>
+                                          <th scope="col" colspan="4">Income Statement</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                       <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table>
+                                <table class="table finance-table mt-3">
+                                    <thead>
+                                      <tr>
+                                          <th scope="col" colspan="4">Balance Sheet</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                       <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table>
+                                <table class="table finance-table mt-3">
+                                    <thead>
+                                      <tr>
+                                          <th scope="col" colspan="4">Cash Flow Statement</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      <tr>
+                                       <td>Revenue</td>
+                                        <td>215,639</td>
+                                        <td>25,635</td>
+                                        <td>15,692</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $('.news-slide').slick({
+        arrows: false,
+        dots: false,
+        infinite: true,
+        vertical: true,
+        speed: 1000,
+        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay:true
+        });
+    </script>
+</body>
+
+</html>
